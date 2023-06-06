@@ -7,3 +7,8 @@ export const getDishes = async () => {
 	const response = await axios.get(url)
 	return response.data
 }
+
+export const createDishNew = async (dish) => {
+	const response = await axios.put(url, dish)
+	return response.data
+}

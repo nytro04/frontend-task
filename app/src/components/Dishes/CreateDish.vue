@@ -130,9 +130,9 @@
 					</div>
 					<div class="flex justify-end space-x-5">
 						<button class="btn btn-primary">Create dish</button>
-						<!-- <button class="btn btn-secondary" @click="toggleModal">
+						<button class="btn btn-secondary" @click="toggleModal">
 							Cancel
-						</button> -->
+						</button>
 					</div>
 				</Form>
 			</div>
@@ -141,10 +141,12 @@
 </template>
 
 <script setup>
+	import { toRefs } from 'vue'
 	import Modal from '@/components/Shared/Modal.vue'
 	import { ErrorMessage, Field, Form } from 'vee-validate'
 
 	import { createDishSchema } from '@/entities/forms/validationSchema'
+	import { useDishStore } from '@/stores/dish'
 
 	const schema = createDishSchema
 
@@ -163,14 +165,19 @@
 		},
 	})
 
+	// const { toggleModal } = toRefs(props)
+
+	const dishStore = useDishStore()
+
 	const categories = ['Breakfast', 'Lunch', 'Dinner', 'Weekday/-ends']
 	const typeOfDish = ['Starter', 'Main', 'Dessert']
 
-	function onSubmit(values) {
-		// Submit values to API...
-		console.log(values)
+	const onSubmit = async (values) => {
+		await dishStore.createNewDish(values)
+		props.toggleModal()
+		// await dishStore.createDish(values)
+		// toggleModal()
 	}
-
 </script>
 
 <style lang="scss" scoped></style>

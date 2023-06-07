@@ -26,7 +26,10 @@
 					@click="closeModal()"
 				>
 					<span class="sr-only">Close</span>
-					X
+					<font-awesome-icon
+						:icon="['fas', 'xmark']"
+						class="font-medium text-black"
+					/>
 				</button>
 			</div>
 			<div>

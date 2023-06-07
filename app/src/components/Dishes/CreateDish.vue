@@ -15,7 +15,7 @@
 					@submit="onSubmit"
 				>
 					<div class="mb-10 grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-6">
-						<div class="mt-4 sm:col-span-4">
+						<div class="mt-4 sm:col-span-6">
 							<label for="name" class="block text-sm font-medium text-gray-700"
 								>Name</label
 							>
@@ -28,7 +28,7 @@
 								<ErrorMessage name="name" class="mt-2 text-sm text-red-600" />
 							</div>
 						</div>
-						<div class="mt-4 sm:col-span-4">
+						<div class="mt-4 sm:col-span-6">
 							<label
 								for="description"
 								class="block text-sm font-medium text-gray-700"
@@ -41,7 +41,7 @@
 									placeholder="description"
 									as="textarea"
 									name="description"
-									:rows="3"
+									:rows="4"
 									class="focus:ring-brand-500 focus:border-brand-500 block w-full rounded-md border border-gray-300 shadow-sm sm:text-sm"
 								/>
 							</div>

@@ -3,32 +3,33 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
-.primary  {
-  @apply rounded bg-blue-500 text-white hover:bg-blue-400;
-}
-
   .btn {
-    @apply inline-flex justify-center items-center px-4 py-2 text-sm font-medium rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
     -webkit-appearance: none;
   }
 
   .btn-primary {
-    @apply text-white bg-blue-500 hover:bg-blue-600;
+    @apply bg-blue-500 text-white hover:bg-blue-600;
     -webkit-appearance: none;
   }
 
-    .btn-secondary {
-    @apply text-blue-700 bg-blue-100 hover:bg-blue-200;
+  .btn-secondary {
+    @apply bg-blue-100 text-blue-700 hover:bg-blue-200;
     -webkit-appearance: none;
   }
 
-.secondary {
-  @apply bg-transparent  text-blue-500 hover:bg-blue-600 hover:text-white;
-}
+  .btn-warning {
+    @apply mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:mt-0 sm:w-auto sm:text-sm;
+    -webkit-appearance: none;
+  }
+
+  .btn-minimal {
+    @apply inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:w-auto sm:text-sm;
+    -webkit-appearance: none;
+  }
 
   .main-container {
-    @apply px-4 py-6 mx-auto mb-1 max-w-7xl sm:px-6 md:px-8;
+    @apply mx-auto mb-1 max-w-7xl px-4 py-6 sm:px-6 md:px-8;
   }
 }

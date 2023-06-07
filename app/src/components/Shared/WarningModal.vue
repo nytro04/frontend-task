@@ -21,7 +21,7 @@
 			</div>
 		</template>
 		<template #button-left>
-			<button class="btn btn-minimal" @click="rejectOffer">
+			<button class="btn btn-minimal" @click="deleteDish">
 				{{ confirmText }}
 			</button>
 		</template>
@@ -32,7 +32,6 @@
 </template>
 
 <script setup>
-	import { defineEmits, defineProps } from 'vue'
 	import Modal from './Modal.vue'
 
 	const props = defineProps({
@@ -60,5 +59,5 @@
 
 	const emits = defineEmits(['click'])
 
-	const rejectOffer = () => emits('click')
+	const deleteDish = () => emits('click')
 </script>

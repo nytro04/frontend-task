@@ -1,6 +1,6 @@
 <template>
 	<tbody class="divide-y divide-gray-200 bg-white">
-		<tr>
+		<tr role="row">
 			<td
 				class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-500"
 			>

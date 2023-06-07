@@ -23,6 +23,7 @@
 								<Field
 									type="text"
 									name="name"
+									id="name"
 									class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
 								/>
 								<ErrorMessage name="name" class="mt-2 text-sm text-red-600" />
@@ -54,13 +55,16 @@
 								<Field
 									type="text"
 									name="price"
+									id="price"
 									class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
 								/>
 								<ErrorMessage name="price" class="mt-2 text-sm text-red-600" />
 							</div>
 						</div>
 						<div class="mt-4 sm:col-span-3">
-							<label for="name" class="block text-sm font-medium text-gray-700"
+							<label
+								for="category"
+								class="block text-sm font-medium text-gray-700"
 								>Category</label
 							>
 							<div class="mt-1">
@@ -68,6 +72,7 @@
 									v-slot="{ value }"
 									name="category"
 									as="select"
+									id="category"
 									class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
 								>
 									<option value="" disabled>Select category</option>
@@ -94,6 +99,7 @@
 								<Field
 									type="text"
 									name="duration"
+									id="duration"
 									class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
 								/>
 								<ErrorMessage
@@ -111,6 +117,7 @@
 									v-slot="{ value }"
 									name="type"
 									as="select"
+									id="type"
 									class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
 								>
 									<option value="" disabled>Select Type</option>
@@ -165,7 +172,9 @@
 		},
 	})
 
-	// const { toggleModal } = toRefs(props)
+		const emits = defineEmits(['click'])
+
+	const rejectOffer = () => emits('click')
 
 	const dishStore = useDishStore()
 

@@ -13,7 +13,7 @@
 			<CreateDish
 				title="Create a dish"
 				:show-modal="showModal"
-				@toggleModal="toggleModal"
+				:toggleModal="toggleModal"
 			/>
 		</div>
 	</div>

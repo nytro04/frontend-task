@@ -148,7 +148,6 @@
 </template>
 
 <script setup>
-	import { toRefs } from 'vue'
 	import Modal from '@/components/Shared/Modal.vue'
 	import { ErrorMessage, Field, Form } from 'vee-validate'
 
@@ -172,10 +171,6 @@
 		},
 	})
 
-		const emits = defineEmits(['click'])
-
-	const rejectOffer = () => emits('click')
-
 	const dishStore = useDishStore()
 
 	const categories = ['Breakfast', 'Lunch', 'Dinner', 'Weekday/-ends']
@@ -184,8 +179,6 @@
 	const onSubmit = async (values) => {
 		await dishStore.createNewDish(values)
 		props.toggleModal()
-		// await dishStore.createDish(values)
-		// toggleModal()
 	}
 </script>
 
